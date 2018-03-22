@@ -4,9 +4,11 @@ prerequisites:
   RedHat:
     - python-pip
     - git
+    - vim
   Debian:
     - python-pip
     - git
+    - vim
 
 db_shared_buffer_size: 256 # MB
 unicorn_workers: 2
