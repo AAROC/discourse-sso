@@ -1,4 +1,6 @@
 ---
+# which user will run discourse ?
+discourse_user: discourse
 # where will discourse be cloned to
 discourse_path: /home/discourse/discourse
 # These are the varibles needed by the discourse container
@@ -10,5 +12,5 @@ smtp_address: smtp.mailgun.org
 smtp_port: 587
 smtp_username: postmaster@sandbox6c9929c31d284bdba0a154af210f7130.mailgun.org
 # this is the path to the installation of DiscourseSSO app
-discourse_sso_install_path: /var/www/DiscourseSSO
+discourse_sso_install_path: /var/www/discourseSSO
 discourse_secret_key: test_key
