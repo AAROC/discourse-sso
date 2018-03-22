@@ -1,0 +1,11 @@
+#Ignore files for Ansible and Molecule
+
+# Ignore all retry files
+*.retry
+
+# ignore python cache
+__pycache__
+*.pyc
+
+# Ignore intermediate molecule states
+.molecule/
