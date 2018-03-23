@@ -55,7 +55,7 @@ env:
   DISCOURSE_DEVELOPER_EMAILS: '{{ developer_emails }}'
 
   ## TODO: The domain name this Discourse instance will respond to
-  DISCOURSE_HOSTNAME: 'meta.sci-gaia.eu'
+  DISCOURSE_HOSTNAME: '{{ discourse_hostname |default(ansible_fqdn)}}'
 
   ## TODO: The mailserver this Discourse instance will use
   DISCOURSE_SMTP_ADDRESS: {{ smtp_address }}         # (mandatory)
