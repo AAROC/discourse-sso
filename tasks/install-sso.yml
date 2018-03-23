@@ -29,7 +29,9 @@
     dest: "{{ discourse_sso_install_path }}/src/discourseSSO/config.py"
 
 - name: output the secret key
-  debug: "var={{discourse_secret_key}}"
+  debug:
+      var: discourse_secret_key
+
 - name: Update the SSO template (secret key)
   become: true
   lineinfile:
