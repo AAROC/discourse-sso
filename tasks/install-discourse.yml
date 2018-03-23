@@ -21,6 +21,7 @@
     repo: git://github.com/discourse/discourse_docker.git
     dest: /home/discourse/discourse
     version: HEAD
+    force: true
 
 - name: Create the containers directory if it's not there yet.
   file:
