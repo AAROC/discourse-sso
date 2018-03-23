@@ -17,6 +17,7 @@
 #  (destroy old, bootstrap, start new)
 - name: rebuild the app
   become: true
+  become_user: "{{ discourse_user }}"
   raw: "{{ discourse_path }}/launcher rebuild app"
   asynch: 120
   poll: 10
