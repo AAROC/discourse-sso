@@ -6,28 +6,29 @@ galaxy_info:
   license: Apache 2.0
   min_ansible_version: 1.9
   platforms:
-  - name: EL
-    versions:
-    - 6
-  - name: Fedora
-    versions:
-    - 19
-  - name: Amazon
-    versions:
-    - 2013.09
-  - name: Ubuntu
-    versions:
-    - saucy
-    - trusty
-    - utopic
-    - vivid
-  - name: Debian
-    versions:
-    - lenny
-    - squeeze
-    - wheezy
+    - name: EL
+      versions:
+        - 6
+    - name: Fedora
+      versions:
+        - 19
+    - name: Amazon
+      versions:
+        - 2013.09
+    - name: Ubuntu
+      versions:
+        - saucy
+        - trusty
+        - utopic
+        - vivid
+    - name: Debian
+      versions:
+        - lenny
+        - squeeze
+        - wheezy
   categories:
     - cloud
     - cloud:ec2
     - web
-#dependencies: [dochang.ansible-role-docker]
+dependencies:
+  - mongrelion.docker

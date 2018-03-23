@@ -1,14 +1,26 @@
 ---
+- name: "Add {{ discourse_user }}"
+  user:
+    name: discourse
+    state: present
+
 - name: check whether the discourse repo is already there
   stat:
     path: "{{ discourse_path }}"
   register: discourse_present
 
+- name: Ensure that git is present
+  become: true
+  package:
+    name: "{{ item }}"
+    state: present
+  with_items: "{{ prerequisites[ansible_os_family] }}"
+
 - name: Get the discourse repo
   git:
     repo: git://github.com/discourse/discourse_docker.git
     dest: /home/discourse/discourse
-  when: discourse_present.stat.exists == false
+    version: HEAD
 
 - name: Create the containers directory if it's not there yet.
   file:

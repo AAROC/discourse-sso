@@ -2,10 +2,18 @@
 # tasks for launching the discourse container
 - name: restart docker
   become: true
-  service: 
-    name: docker 
+  service:
+    name: docker
     state: restarted
   changed_when: false
+
+- name: There's really nothing wrong with devicemapper
+  replace:
+    path: "{{ discourse_path }}/launcher"
+    after:
+    regexp: aufs\|btrfs\|zfs\|overlay\|overlay2
+    replace: aufs|btrfs|zfs|overlay|overlay2|devicemapper
+  
 
 - name: bootstrap the app
   become: true
