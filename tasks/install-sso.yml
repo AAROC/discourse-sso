@@ -30,7 +30,7 @@
 
 - name: output the secret key
   debug:
-      var: discourse_secret_key
+    var: discourse_secret_key
 
 - name: Update the SSO template (secret key)
   become: true

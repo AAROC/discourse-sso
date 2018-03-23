@@ -13,12 +13,10 @@
     after:
     regexp: aufs\|btrfs\|zfs\|overlay\|overlay2
     replace: aufs|btrfs|zfs|overlay|overlay2|devicemapper
-  
 
-- name: bootstrap the app
-  become: true
-  raw: "{{ discourse_path }}/launcher bootstrap app"
-
+#  (destroy old, bootstrap, start new)
 - name: rebuild the app
   become: true
-  raw: "{{ discourse_path }}/launcher reubild app"
+  raw: "{{ discourse_path }}/launcher rebuild app"
+  asynch: 120
+  poll: 10
