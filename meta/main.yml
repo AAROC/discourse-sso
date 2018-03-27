@@ -32,3 +32,4 @@ galaxy_info:
     - web
 dependencies:
   - mongrelion.docker
+  - jdauphant.nginx
