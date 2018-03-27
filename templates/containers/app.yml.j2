@@ -86,7 +86,7 @@ hooks:
           - mkdir -p plugins
           - git clone https://github.com/discourse/docker_manager.git
 {% if discourse_plugins != [] %}
-{% for plugins in discourse_plugins %}
+{% for plugin in discourse_plugins %}
           - git clone {{ plugin.url }}
 {% endfor %}
 {% endif %}
