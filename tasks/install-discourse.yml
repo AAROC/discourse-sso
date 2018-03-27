@@ -38,3 +38,10 @@
     src: containers/app.yml.j2
     dest: "{{ discourse_path }}/containers/app.yml"
     owner: discourse
+
+- name: There's really nothing wrong with devicemapper
+  replace:
+    path: "{{ discourse_path }}/launcher"
+    after:
+    regexp: aufs\|btrfs\|zfs\|overlay\|overlay2
+    replace: aufs|btrfs|zfs|overlay|overlay2|devicemapper

@@ -16,3 +16,6 @@ developer_emails: nobody@nowhere.com # change this - it makes no sense
 smtp_address: smtp.gmail.com
 smtp_port: 587
 smtp_username: admin@example.com
+
+# Do you actually want to launch ?
+launch: false

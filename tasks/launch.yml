@@ -7,13 +7,6 @@
     state: restarted
   changed_when: false
 
-- name: There's really nothing wrong with devicemapper
-  replace:
-    path: "{{ discourse_path }}/launcher"
-    after:
-    regexp: aufs\|btrfs\|zfs\|overlay\|overlay2
-    replace: aufs|btrfs|zfs|overlay|overlay2|devicemapper
-
 #  (destroy old, bootstrap, start new)
 - name: rebuild the app
   become: true
