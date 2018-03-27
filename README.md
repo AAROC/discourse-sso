@@ -8,7 +8,7 @@ The SAML configuration uses [DiscourseSSO](http://github.com/fmarco76/DiscourseS
 Requirements
 ------------
 
-  1. Apache web server with proxy to nginx inside the Discourse container
+  1. web server with proxy to the rails app inside the Discourse container
   2. Flask python microserver framework
 
 
@@ -17,16 +17,16 @@ Role Variables
 
 Variables are used to tune the Rails application that runs Discourse. These are in a template, and set in the `defaults/main.yml` and `vars/main.yml` file. Please read them and set them accordingly in `vars/main.yml`
 
-  - db_shared_buffer_size
-  - unicorn_workers
-  - smtp_address
-  - smtp_port
-  - smtp_username
+  - `db_shared_buffer_size`
+  - `unicorn_workers`
+  - `smtp_address`
+  - `smtp_port`
+  - `smtp_username`
 
 Dependencies
 ------------
 
-  - dochang.ansible-role-docker
+See `meta/main.yml` for the role dependencies. 
 
 Example Playbook
 ----------------
@@ -35,7 +35,7 @@ Including an example of how to use your role (for instance, with variables passe
 
     - hosts: discourse-servers
       roles:
-         - { role: dochang.ansible-role-docker }
+         - { role: AAROC.discourse-sso, launch: true }
 
 License
 -------
