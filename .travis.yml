@@ -7,9 +7,9 @@ install:
   - pip install molecule
 before_script:
 script:
-  - molecule lint
-  - molecule dependency
-  - molecule syntax
+  - molecule lint -s openstack-unict
+  - molecule dependency -s openstack-unict
+  - molecule syntax -s openstack-unict
 after_success:
 after_failure:
 after_script:
