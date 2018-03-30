@@ -13,6 +13,12 @@ provisioner:
   name: ansible
   lint:
     name: ansible-lint
+    options:
+      x:
+        - ANSIBLE0012
+        - ANSIBLE0004
+      force-color: True
+    enabled: false
 scenario:
   name: openstack-unict
 verifier:

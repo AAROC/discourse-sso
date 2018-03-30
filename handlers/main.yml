@@ -1,2 +1,6 @@
 ---
 # handlers file for discourse-sso
+- name: reload firewalld
+  service:
+    name: firewalld
+    status: restarted

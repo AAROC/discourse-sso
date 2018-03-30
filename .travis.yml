@@ -1,0 +1,15 @@
+language: python
+python:
+  - '2.7'
+before_install:
+  - sudo apt-get install python-dev
+install:
+  - pip install molecule
+before_script:
+script:
+  - molecule lint -s openstack-unict
+  - molecule dependency -s openstack-unict
+  - molecule syntax -s openstack-unict
+after_success:
+after_failure:
+after_script:
