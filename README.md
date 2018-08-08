@@ -1,4 +1,8 @@
-Role Name
+[![Build Status](https://travis-ci.org/AAROC/discourse-sso.svg?branch=master)](https://travis-ci.org/AAROC/discourse-sso)  
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.1208650.svg)](https://doi.org/10.5281/zenodo.1208650)
+
+Discourse with SSO
 =========
 
 This is a role for deploying [Discourse](http://www.discourse.org) with federated login. Discourse uses docker to run the application in a container, and has a custom script for delpoying the database and supporting services on the host machine. This script `launcher` is used by the role.
