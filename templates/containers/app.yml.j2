@@ -14,12 +14,8 @@
 # This is configurable by amending the params in this file
 
 templates:
-  - "templates/postgres.template.yml"
-  - "templates/redis.template.yml"
-  - "templates/web.template.yml"
-  - "templates/sshd.template.yml"
-  - "templates/web.ratelimited.template.yml"
-  -  "templates/web.socketed.template.yml" 
+{% for template in templates %}
+  - "templates/{{ template}}.template.yml"
 ## which TCP/IP ports should this container expose?
 # We expose the container port 80 to the host port 8080, since Apache will be listening here for login requests
 # expose:
