@@ -12,10 +12,20 @@ prerequisites:
 
 db_shared_buffer_size: 256 # MB
 unicorn_workers: 2
+# email settings
 developer_emails: nobody@nowhere.com # change this - it makes no sense
 smtp_address: smtp.gmail.com
 smtp_port: 587
 smtp_username: admin@example.com
 
+#  templates to use
+discourse_templates:
+  - postgres
+  - redis
+  - web
+  - sshd
+  - web.ratelimited
+
 # Do you actually want to launch ?
 launch: false
+
