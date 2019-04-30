@@ -8,7 +8,7 @@
     repo: git://github.com/AAROC/DiscourseSSO
     dest: "{{ discourse_sso_install_path }}"
     accept_hostkey: true
-    force: yes
+    force: true
     version: HEAD
 
 - name: Ensure latest pip

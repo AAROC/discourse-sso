@@ -17,7 +17,7 @@ provisioner:
       x:
         - ANSIBLE0012
         - ANSIBLE0004
-      force-color: True
+      force-color: true
     enabled: false
 scenario:
   name: openstack-unict

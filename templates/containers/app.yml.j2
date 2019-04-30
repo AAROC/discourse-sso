@@ -16,7 +16,7 @@
 templates:
 {% for template in templates %}
   - "templates/{{ template}}.template.yml"
-{% endor %}
+{% endfor %}
 ## which TCP/IP ports should this container expose?
 # We expose the container port 80 to the host port 8080, since Apache will be listening here for login requests
 # expose:

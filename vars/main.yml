@@ -5,10 +5,11 @@ discourse_user: discourse
 discourse_path: /home/discourse/discourse
 # These are the varibles needed by the discourse container
 # Should be protected with ansible_vault
-db_shared_buffer_size: 512 # MB
+# Bufffer size in MB
+db_shared_buffer_size: 512
 unicorn_workers: 4
 
-#discourse_hostname:
+# discourse_hostname:
 developer_emails: 'brucellino@gmail.com'
 smtp_address: smtp.mailgun.org
 smtp_port: 587
