@@ -10,10 +10,12 @@ prerequisites:
     - git
     - vim
 
-db_shared_buffer_size: 256 # MB
+# Buffer size in MB
+db_shared_buffer_size: 256
 unicorn_workers: 2
 # email settings
-developer_emails: nobody@nowhere.com # change this - it makes no sense
+# change this - it makes no sense
+developer_emails: nobody@nowhere.com
 smtp_address: smtp.gmail.com
 smtp_port: 587
 smtp_username: admin@example.com
