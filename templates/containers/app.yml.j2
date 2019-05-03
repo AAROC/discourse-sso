@@ -14,7 +14,7 @@
 # This is configurable by amending the params in this file
 
 templates:
-{% for template in templates %}
+{% for template in discourse_templates %}
   - "templates/{{ template}}.template.yml"
 {% endfor %}
 ## which TCP/IP ports should this container expose?
