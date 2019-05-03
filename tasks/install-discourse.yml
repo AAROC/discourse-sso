@@ -43,5 +43,5 @@
   replace:
     path: "{{ discourse_path }}/launcher"
     after:
-    regexp: aufs\|btrfs\|zfs\|overlay\|overlay2
-    replace: aufs|btrfs|zfs|overlay|overlay2|devicemapper
+    regexp: \(aufs\|btrfs\|zfs\|overlay\|overlay2\)
+    replace: (aufs|btrfs|zfs|overlay|overlay2|devicemapper)
