@@ -19,7 +19,7 @@ Requirements
 Role Variables
 --------------
 
-Variables are used to tune the Rails application that runs Discourse. These are in a template, and set in the `defaults/main.yml` and `vars/main.yml` file. Please read them and set them accordingly in `vars/main.yml`
+Variables are used to tune the Rails application that runs Discourse. These are in a template, and sensible defaults are set in the `defaults/main.yml` file. However, not all variables can have sensible defaults (such as email addresses), since your instance will be special :snowflake:. You should set them them accordingly in your playbook or in `vars/main.yml`. See the [Ansible documentation on variables](https://docs.ansible.com/ansible/latest/user_guide/playbooks_variables.html#variable-precedence-where-should-i-put-a-variable) for how Ansible deals with variable precendence.
 
   - `db_shared_buffer_size`
   - `unicorn_workers`
